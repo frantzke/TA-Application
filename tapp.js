@@ -1,13 +1,12 @@
+//Express server
 var express = require('express');
-var app = express();
+var tas = require('./routes/tas');
 var bodyParser = require('body-parser');
 
+var app = express();
 
-// Set views path, template engine and default layout
 app.use(express.static(__dirname + '/assets'));
-app.engine('.html', require('ejs').__express);
-app.set('views', __dirname);
-app.set('view engine', 'html');
+app.use(express.static(__dirname + '/'));
 
 
 // The request body is received on GET or POST.
@@ -17,6 +16,13 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
 }));
 
+// Get the index page:
+app.get('/', function(req, res) {
+    res.sendfile('index.html');
+});
+
+//TODO: Server functions go here
+app.get('/tas', tas.findAll);
 
 var server = app.listen(3000, function()
 {
