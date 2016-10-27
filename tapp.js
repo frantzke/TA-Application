@@ -22,7 +22,13 @@ app.get('/', function(req, res) {
 });
 
 //TODO: Server functions go here
-app.get('/tas', tas.findAll);
+app.get('/applicants', tas.allAppl);
+
+app.post('/addapplicant', tas.addAppl);
+
+//app.get("/applicants?status=':status'", tas.applByStatus);
+
+//app.post('/applicants', tas.allAppl);
 
 var server = app.listen(3000, function()
 {

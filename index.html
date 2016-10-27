@@ -3,29 +3,52 @@
   <head>
     <title>TA Applications</title>
     <meta charset="utf-8">
-    <style></style>
+    <link rel="stylesheet" href="css/style.css?v=1.0" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script  type="text/javascript" src="scripts/script.js"></script>
+
   </head>
   
   <body>
-	  <h1>TA Applications</h1>
-	  <div id = "menu">
-		  <div id="AllApplDiv">
-			  <p>List All Applicants</p>
-			  <input type="button" name="all-appl" id="all-appl" value="List All Applicants" />
-		  </div>
-		  <div id="ApplStatusDiv">
-			  <p>Search By Applicant Status</p>
-			  <!--Drop down menu goes here-->
-			  <input type="button" name="status-appl" id="status-appl" value="Applicants by Status" />
+	  	<h1>TA Applications</h1>
+	  	<div id = "menu">
+		  	<form id="AllAppl" method="get">
+				<p>List All Applicants</p>
+			 	<!-- <input type="button" name="all-appl" id="all-appl" value="List All Applicants" />-->
+			  	<input id="AllApplbutton" type="submit" value="List All Applicants">
+		  	</form>
+		  	<div id="ApplStatusDiv">
+				<p>Search By Applicant Status</p>
+			  	<!--Drop down menu goes here Undergrad, MSc, PhD, MScAC, MEng-->
+			  	<form>
+			  	<select id="statusSelect" onchange="selectStatus()">
+			    	<option>Undergrad</option>
+			    	<option>MSc</option>
+			    	<option>PhD</option>
+			    	<option>MScAC</option>
+			    	<option>MEng</option>
+			  	</select>
+				</form>
+				<form id="ApplByStatus" method="get">
+					<input id="ApplByStatusButton" type="submit" value="Search Applicants by Status">
+				</form>
 		  </div>
 		  <div id="listApplDiv">
 			  <p>Search By Family Name</p>
-			  <input type="text" name="appl-name" id="appl-name" />
+			  <input class="input" type="text" name="appl-name" id="appl-name" />
 			  <input type="button" name="list-appl" id="list-appl" value="List Applicants" />
 		  </div>
 		  <div id="AddApplDiv">
-			  <p>Add Applicant</p>
-			  <input type="button" name="add-appl" id="add-appl" value="Add Applicant" />
+				<p>Add Applicant</p>
+				<form id="AddAppl" method="post">
+					<input class="input" type="text" id="stunum" name="stunum" /></input>
+					<input class="input" type="text" id="givenname" name="givenname"></input>
+					<input class="input" type="text" id="status" name="status"></input>
+					<input class="input" type="text" id="year" name="year"></input>
+					<input class="input" type="text" name="courses[]">
+					<input id="addButton" type="submit" value="Submit">
+			  	</form>
+			  
 		  </div>
 		  <div id="RemoveApplDiv">
 			  <p>Remove Applicant</p>
@@ -44,7 +67,5 @@
 	  <ol id="results">
         
 		</ol>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	  <script src="scripts/script.js"></script>
   </body>
 </html>
