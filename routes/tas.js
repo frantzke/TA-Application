@@ -10,25 +10,43 @@ fs.readFile('tas.json', 'utf-8', function(err, data) {
 });
 
 exports.allAppl = function(req, res) {
-	console.log(req.params.status);
-	console.log(JSON.stringify(tasObj));
-	res.send(JSON.stringify(tasObj));
+	var returnList = [];
+	if(req.query.status != undefined){
+		var statusStr = req.query.status.substr(1,req.query.status.length-2);
+		console.log(statusStr);
+		for(var i = 0; i < tasObj.tas.length;i++){
+			console.log(statusStr.localeCompare(tasObj.tas[i].status) == 0);
+			if(statusStr.localeCompare(tasObj.tas[i].status) == 0){
+				returnList.push(tasObj.tas[i]);
+			}
+		}
+		console.log(returnList);
+	} else{
+		returnList = tasObj.tas;
+	}
+	var returnObj = {"tas":returnList};
+	console.log(JSON.stringify(returnObj));
+	res.send(JSON.stringify(returnObj));
 };
 
-exports.applByStatus = function(req, res) {
-	console.log("Find Applicants by status")
-	console.log(req.params.status);
-    var status = req.params.status;
-    var statusObj =  JSON.stringify(tasObj);
+//Returns a list of TA objects with status == status
+/*
+function applByStatus(status){
+	var statusList = [];
+	console.log(status);
+	for(var i = 0; i < tasObj.tas.length;i++){
+		console.log(tasObj.tas[i].status);
+		console.log(status.localeCompare(tasObj.tas[i].status));
+		var taStatus = tasObj.tas[i].status;
+		if(status.localeCompare(taStatus) == 0){
+			statusList.push(tasObj.tas[i]);
+		}
+		//if(tasObj.tas[i].status == status){}
+	}
+	console.log(statusList);
+	return statusList;
+}*/
 
-    for(var i = 0; i < statusObj.tas.length; i++) {
-    	if(statusObj.tas[i].status = status){
-    		console.log(JSON.stringify(tasObj.tas[i].status));
-    	}
-    }
-    console.log(JSON.stringify(tasObj.tas[status]));
-    res.send(JSON.stringify(tasObj.tas[status]));
-};
 
 exports.addAppl = function(req, res) {
     console.log(req.body);
@@ -37,5 +55,13 @@ exports.addAppl = function(req, res) {
     tasObj.tas.push(newta);
     console.log("Success:");
     console.log(JSON.stringify(tasObj));
+    res.send("Success");
+};
+
+exports.delete = function(req, res) {
+    var id = parseInt(req.params.id);
+    //tasObj.longlist.splice(id-1,1);
+    console.log("Success:");
+    console.log(JSON.stringify(bookObj))
     res.send("Success");
 };
