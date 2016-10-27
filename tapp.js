@@ -26,6 +26,8 @@ app.get('/applicants', tas.allAppl);
 
 app.post('/addapplicant', tas.addAppl);
 
+app.delete('/remove/:id', tas.delete);
+
 //app.get("/applicants?status=':status'", tas.applByStatus);
 
 //app.post('/applicants', tas.allAppl);
