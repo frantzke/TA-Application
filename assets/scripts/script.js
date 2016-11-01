@@ -19,11 +19,31 @@ function printList(taList){
                              taList[i].year);
         parent.append(tmp);
     }
+}
 
+function printCourses(courseList){
+    let parent = $('#results');
+    parent.empty();
+    for(let i = 0; i < taList.length; i++) {
+        let tmp = $('<li>').text(taList[i].givenname + '  ' + 
+                             taList[i].familyname + ' ' +
+                             taList[i].status + ' ' +
+                             taList[i].year);
+        parent.append(tmp);
+    }
 }
 
 // jQuery Documentpos
 $(document).ready(function() {
+
+    $("#AllCourses").submit(function (e) {
+        e.preventDefault();
+        alert("@AllCourses")
+        $.get('/courses', function(data){
+            let taObj = JSON.parse(data);
+            //printList(taObj.tas);
+        });
+    });
 
     $("#RemoveByStunum").submit(function (e) {
         e.preventDefault();
@@ -37,11 +57,6 @@ $(document).ready(function() {
                 location.reload(true);
             }
         });
-        //$.delete("/applicants");
-        /*$.delete("/applicants?stunum='"+num+"'",function(data){
-            let taObj = JSON.parse(data);
-            printList(taObj.tas);
-        });*/
     });
 
     $("#RemoveByfname").submit(function (e) {

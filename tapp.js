@@ -28,9 +28,7 @@ app.post('/applicants', tas.addAppl);
 
 app.delete('/applicants', tas.deleteAppl);
 
-//app.get("/applicants?status=':status'", tas.applByStatus);
-
-//app.post('/applicants', tas.allAppl);
+app.get('/courses', tas.findCourses);
 
 var server = app.listen(3000, function()
 {

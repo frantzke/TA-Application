@@ -9,6 +9,12 @@ fs.readFile('tas.json', 'utf-8', function(err, data) {
     tasObj = JSON.parse(data);
 });
 
+var coursesObj;
+fs.readFile('courses.json', 'utf-8', function(err, data) {
+    if(err) throw err;
+    coursesObj = JSON.parse(data);
+});
+
 exports.allAppl = function(req, res) {
 	//console.log(req);
 	console.log(req.query);
@@ -82,4 +88,27 @@ exports.deleteAppl = function(req, res) {
     console.log("Success:");
     console.log(JSON.stringify(tasObj));
     res.send("Success");
+};
+
+exports.findCourses = function(req, res) {
+	console.log(req.query);
+	//List of TAs to return
+	//{courseList: [{courseName: [{ranking:0, experiene:0, status:Undergrad, givenname:name, familyname:name}]}]}
+	var courseList = [];
+	//Add all courses
+	for (var i = 0; i < coursesObj.courses.length; i++){
+		console.log(coursesObj.courses[i]);
+		courseList.push(coursesObj.courses[i] : []);
+	}
+
+	for (var i=0; i < tasObj.tas.length; i++){
+		for(var j=0; j < tasObj.tas[i].courses.length; j++){
+			//var courseIndex = courseList.indexOf(tasObj.tas[i].courses[j].code);
+			//courseList.push(tasObj.tas[i]);
+		}
+	}
+	//Create a object to return
+	var returnObj = {"courses":courseList};
+	console.log(JSON.stringify(returnObj));
+	res.send(JSON.stringify(returnObj));
 };
