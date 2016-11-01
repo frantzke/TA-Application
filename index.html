@@ -31,10 +31,10 @@
 				</form>
 		  </div>
 		  <div id="listApplDiv">
-			  <form id = "fname" method="get">
+			  <form id = "ApplByName" method="get">
 			  		<p>Search By Family Name</p>
-				  	<input type="text" name="fname" id="fname" />
-					<input type="submit" id="fnameButton" value="Search Applicants by Family Name" />
+				  	<input type="text" name="familyname" id="ApplName" />
+					<input type="submit" id="ApplByNameButton" value="Search Applicants by Family Name" />
 			  </form>
 		  </div>
 		  <div id="AddApplDiv">
@@ -55,10 +55,15 @@
 			  	</form>
 		  </div>
 		  <div id="RemoveApplDiv">
-		  		<form id="RemoveByStunum" method="post">
+		  		<form id="RemoveByStunum" method="delete">
 					<p>Remove Applicant</p>
 					<input type="text" id="removeStunum" name="stunum" /></input>
 					<input id="removeStunumButton" type="submit" value="Remove by Student Number"></input>
+			  	</form>
+			  	<form id="RemoveByfname" method="delete">
+					<p>Remove Applicant</p>
+					<input type="text" id="removefname" name="fname" /></input>
+					<input id="removefnameButton" type="submit" value="Remove by Family Name"></input>
 			  	</form>
 		  </div>
 		  <div id="AllCoursDiv">

@@ -1,6 +1,6 @@
 //Express server
 var express = require('express');
-var tas = require('./routes/tas');
+var tas = require('./routes/routes');
 var bodyParser = require('body-parser');
 
 var app = express();
@@ -24,9 +24,9 @@ app.get('/', function(req, res) {
 //TODO: Server functions go here
 app.get('/applicants', tas.allAppl);
 
-app.post('/addapplicant', tas.addAppl);
+app.post('/applicants', tas.addAppl);
 
-app.delete('/remove/:id', tas.delete);
+app.delete('/applicants', tas.deleteAppl);
 
 //app.get("/applicants?status=':status'", tas.applByStatus);
 
