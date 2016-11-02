@@ -9,6 +9,7 @@ fs.readFile('tas.json', 'utf-8', function(err, data) {
     tasObj = JSON.parse(data);
 });
 
+//Read course information from courses.json
 var coursesObj;
 fs.readFile('courses.json', 'utf-8', function(err, data) {
     if(err) throw err;
@@ -16,7 +17,6 @@ fs.readFile('courses.json', 'utf-8', function(err, data) {
 });
 
 exports.allAppl = function(req, res) {
-	//console.log(req);
 	console.log(req.query);
 	console.log("Type: "+req.type);
 	//List of TAs to return
@@ -92,19 +92,47 @@ exports.deleteAppl = function(req, res) {
 
 exports.findCourses = function(req, res) {
 	console.log(req.query);
+	console.log(req.query.course);
 	//List of TAs to return
-	//{courseList: [{courseName: [{ranking:0, experiene:0, status:Undergrad, givenname:name, familyname:name}]}]}
+	//{courseList: [{courseName: [{ranking:0, experience:0, status:Undergrad, givenname:name, familyname:name}]}]}
 	var courseList = [];
-	//Add all courses
-	for (var i = 0; i < coursesObj.courses.length; i++){
-		console.log(coursesObj.courses[i]);
-		courseList.push(coursesObj.courses[i] : []);
-	}
+	if(req.query.course != undefined){
+		var courseListItem = {coursename: req.query.course, tasList: [] };
+		courseList.push(courseListItem);
+		for (var i=0; i < tasObj.tas.length; i++){
+			for(var j=0; j < tasObj.tas[i].courses.length; j++){
+				if(req.query.course.localeCompare(tasObj.tas[i].courses[j].code) == 0){
+					var ta = {rank: tasObj.tas[i].courses[j].rank,
+					experience:tasObj.tas[i].courses[j].experience,
+				 	status: tasObj.tas[i].status,
+				 	givenname: tasObj.tas[i].givenname,
+				 	familyname: tasObj.tas[i].familyname};
+					courseList[0].tasList.push(ta);
+				}
+			}
+		}
+	} else {
 
-	for (var i=0; i < tasObj.tas.length; i++){
-		for(var j=0; j < tasObj.tas[i].courses.length; j++){
-			//var courseIndex = courseList.indexOf(tasObj.tas[i].courses[j].code);
-			//courseList.push(tasObj.tas[i]);
+		var courseIndexList = [];
+
+		//Add all courses
+		for (var i = 0; i < coursesObj.courses.length; i++){
+			console.log(coursesObj.courses[i]);
+			var courseListItem = {coursename: coursesObj.courses[i], tasList: [] };
+			courseList.push(courseListItem);
+			courseIndexList.push(coursesObj.courses[i]);
+		}
+		
+		for (var i=0; i < tasObj.tas.length; i++){
+			for(var j=0; j < tasObj.tas[i].courses.length; j++){
+				var courseIndex = courseIndexList.indexOf(tasObj.tas[i].courses[j].code);
+				var ta = {rank: tasObj.tas[i].courses[j].rank,
+					experience:tasObj.tas[i].courses[j].experience,
+				 	status: tasObj.tas[i].status,
+				 	givenname: tasObj.tas[i].givenname,
+				 	familyname: tasObj.tas[i].familyname};
+				courseList[courseIndex].tasList.push(ta);
+			}
 		}
 	}
 	//Create a object to return

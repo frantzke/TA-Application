@@ -12,11 +12,13 @@
   <body>
 	  	<h1>TA Applications</h1>
 	  	<div id = "menu">
-		  	<form id="AllAppl" method="get">
-				<p>List All Applicants</p>
-			 	<!-- <input type="button" name="all-appl" id="all-appl" value="List All Applicants" />-->
-			  	<input id="AllApplbutton" type="submit" value="List All Applicants">
-		  	</form>
+	  		<div id="AllApplDiv">
+			  	<form id="AllAppl" method="get">
+					<p>List All Applicants</p>
+				  	<input id="AllApplbutton" type="submit" value="List All Applicants">
+			  	</form>
+			  	<ol id="AllApplResult"></ol>
+		  	</div>
 		  	<div id="ApplStatusDiv">
 				<form id="ApplByStatus" method="get">
 					<p>Search By Applicant Status</p>
@@ -29,6 +31,7 @@
 				  	</select>
 					<input id="ApplByStatusButton" type="submit" value="Search Applicants by Status">
 				</form>
+				<ol id="ApplByStatusResult"></ol>
 		  </div>
 		  <div id="listApplDiv">
 			  <form id = "ApplByName" method="get">
@@ -36,6 +39,7 @@
 				  	<input type="text" name="familyname" id="ApplName" />
 					<input type="submit" id="ApplByNameButton" value="Search Applicants by Family Name" />
 			  </form>
+			  <ol id="ApplByNameResult"></ol>
 		  </div>
 		  <div id="AddApplDiv">
 				<form id="AddAppl" method="post">
@@ -71,13 +75,16 @@
 		  			<p>List All Courses</p>
 			 		<input id="AllCoursesButton" type="submit" value="List All Courses"></input>
 			  	</form>
+			  	<ol id="AllCoursesResult"></ol>
 		  </div>
-		  <div id="SearchCoursDiv">
-		  		<form>
+		  <div id="SearchCourseDiv">
+		  		<form id="SearchCourse">
 					<p>Search For Course by Name</p>
 					<input type="text" name="cours-name" id="cours-name" />
-					<input type="button" name="search-cours" id="search-cours" value="Search Course" />
+			 		<input id="SearchCoursesButton" type="submit" value="Search Course by Name"></input>
 			  	</form>
+			  	<ol id="SearchCoursesResult"></ol>
+
 		  </div>
 	  </div>
 	  <ol id="results"></ol>
