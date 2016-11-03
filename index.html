@@ -11,6 +11,14 @@
   
   <body>
 	  	<h1>TA Applications</h1>
+	  	<ul class = "navDiv">
+			<li><a href="#AllApplDiv">Applicants</a> </li>
+			<li><a href="#ApplStatusDiv">Applicants by Status</a> </li>
+			<li><a href="#ApplByNameDiv">Search by Family Name</a></li>
+			<li><a href="#AddApplDiv">Add Applicant</a></li>
+			<li><a href="#RemoveApplDiv">Remove Applicant</a></li>
+			<li><a href="#AllCoursDiv">Search For Course</a></li>
+		</ul>
 	  	<div id = "menu">
 	  		<div id="AllApplDiv">
 			  	<form id="AllAppl" method="get">
@@ -33,7 +41,7 @@
 				</form>
 				<ol id="ApplByStatusResult"></ol>
 		  </div>
-		  <div id="listApplDiv">
+		  <div id="ApplByNameDiv">
 			  <form id = "ApplByName" method="get">
 			  		<p>Search By Family Name</p>
 				  	<input type="text" name="familyname" id="ApplName" />
@@ -57,6 +65,7 @@
 					<input type= "hidden" name="courses[]"></input>
 					<input id="addButton" type="submit" value="Submit"></input>
 			  	</form>
+			  	<p id="AddApplResult"></p>
 		  </div>
 		  <div id="RemoveApplDiv">
 		  		<form id="RemoveByStunum" method="delete">

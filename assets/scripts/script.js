@@ -34,6 +34,28 @@ function printList(taList, printLocation){
     }
 }
 
+//print a single applicant
+function printApplicant(ta){
+    let parent = $("#ApplByNameResult");
+    //clear field
+    parent.empty();
+    let taInfo = $("<li></li>").text(ta.givenname + ' ' +
+        ta.familyname + ' ' +
+        ta.status + ' ' +
+        ta.year + ' ');
+    parent.append(taInfo);
+    let courseList = $('<ol></ol>');
+    //parent.append(courseList);
+    for(let j =0; j < ta.courses.length; j++){
+        //alert(courseList[i].tasList[j].givenname);
+        let course = $('<li></li>').text(ta.courses[j].code + ' ' + 
+                    ta.courses[j].rank + ' '+ 
+                    ta.courses[j].experience);
+        courseList.append(course);
+    }   
+    parent.append(courseList);
+}
+
 function printCourses(courseList, printLocation){
     //TODO: Sort by rank
     let parent = $(printLocation);
@@ -83,7 +105,6 @@ $(document).ready(function() {
     $("#RemoveByStunum").submit(function (e) {
         e.preventDefault();
         let num = $('#removeStunum').val();
-        alert("Delete Num: "+num);
         $.ajax({
             url: '/applicants?stunum='+num ,
             type: 'DELETE',
@@ -103,7 +124,7 @@ $(document).ready(function() {
             success: function result() {
                 location.reload(true);
             }
-        })
+        });
     });
 
     //Add applicant button
@@ -112,7 +133,17 @@ $(document).ready(function() {
         e.preventDefault();
         console.log($('form').serialize());
         $.post('/applicants', $('#AddAppl').serialize());
-        location.reload(true);
+        $.ajax({
+            url: '/applicants' ,
+            type: 'POST',
+            success: function(res) {
+                //Print Success or Error: duplicate student number
+                resultObj = JSON.parse(res);
+                let result = $('#AddApplResult');
+                alert(resultObj.text);
+                result.text(resultObj.text);
+            }
+        });
     });
 
     //List applicants by family name
@@ -122,6 +153,9 @@ $(document).ready(function() {
         $.get("/applicants?fname='"+name+"'", function(data){
             let taObj = JSON.parse(data);
             printList(taObj.tas, "#ApplByNameResult");
+            if(taObj.tas[0] != undefined){
+                printApplicant(taObj.tas[0]);
+            }
         });
     });
 

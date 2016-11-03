@@ -17,6 +17,7 @@ fs.readFile('courses.json', 'utf-8', function(err, data) {
 });
 
 exports.allAppl = function(req, res) {
+	//TODO: Return objects with only significant info
 	console.log(req.query);
 	console.log("Type: "+req.type);
 	//List of TAs to return
@@ -53,11 +54,25 @@ exports.allAppl = function(req, res) {
 exports.addAppl = function(req, res) {
     console.log(req.body);
     var newta = req.body;
+    var found = false;
+   	var result = {"text": "Error: duplicate student number"};
+
+    for(var i = 0; i < tasObj.tas.length;i++){
+		if(newta.stunum.localeCompare(tasObj.tas[i].stunum) == 0){
+			//Duplicate student TA number
+			found = true;
+		}
+	}
     
-    tasObj.tas.push(newta);
-    console.log("Success:");
+    if(!found){
+    	tasObj.tas.push(newta);
+    	result.text = "Success";
+    }
+    
+    console.log(result);
     console.log(JSON.stringify(tasObj));
-    res.send("Success");
+    console.log(JSON.stringify(result));
+    res.send(JSON.stringify(result));
 };
 
 exports.deleteAppl = function(req, res) {
@@ -126,12 +141,15 @@ exports.findCourses = function(req, res) {
 		for (var i=0; i < tasObj.tas.length; i++){
 			for(var j=0; j < tasObj.tas[i].courses.length; j++){
 				var courseIndex = courseIndexList.indexOf(tasObj.tas[i].courses[j].code);
-				var ta = {rank: tasObj.tas[i].courses[j].rank,
-					experience:tasObj.tas[i].courses[j].experience,
-				 	status: tasObj.tas[i].status,
-				 	givenname: tasObj.tas[i].givenname,
-				 	familyname: tasObj.tas[i].familyname};
-				courseList[courseIndex].tasList.push(ta);
+				console.log(courseIndex);
+				if ( courseIndex > 0){
+					var newta = {rank: tasObj.tas[i].courses[j].rank,
+						experience:tasObj.tas[i].courses[j].experience,
+					 	status: tasObj.tas[i].status,
+					 	givenname: tasObj.tas[i].givenname,
+					 	familyname: tasObj.tas[i].familyname};
+					courseList[courseIndex].tasList.push(newta);
+				}			
 			}
 		}
 	}

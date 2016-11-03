@@ -4,3 +4,17 @@ div {
     margin: 2rem auto;
     width: 66%;
 }
+
+ul.navDiv{
+	position:fixed;
+   	top:20%;
+   	left:6px;
+   	color: black;
+   	background-color: white;
+   	padding: 4px;
+}
+
+a{
+	padding: 8px;
+    display:inline-block;
+}
