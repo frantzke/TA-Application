@@ -18,6 +18,7 @@ function compare(ta,otherTa) {
     return 0;
 }
 
+//Sort courses by rank
 function compareCourse(c1,c2){
     return c1.rank - c2.rank;
 }
@@ -49,6 +50,7 @@ function printList(taList, printLocation){
 function printApplicant(ta){
     let parent = $("#ApplByNameTable");
     parent.empty();
+    parent.append($("<caption></caption").text("Applicant"));
     let tableRowHead = $("<tr></tr>");
     tableRowHead.append($("<th></th>").text("Given Name"));
     tableRowHead.append($("<th></th>").text("Family Name"));
@@ -65,6 +67,7 @@ function printApplicant(ta){
     courseParent.empty();
     //Sort Courses by rank
     ta.courses.sort(compareCourse);
+    parent.append($("<caption></caption").text("Courses"));
     let tableRowCourseHead = $("<tr></tr>");
     tableRowCourseHead.append($("<th></th>").text("Code"));
     tableRowCourseHead.append($("<th></th>").text("Rank"));        
@@ -83,23 +86,26 @@ function printCourses(courseList, printLocation){
     //TODO: Sort by rank
     let parent = $(printLocation);
     parent.empty();
-    //alert(courseList.length);
+    let tableRowHead = $("<tr></tr>");
+    tableRowHead.append($("<th></th>").text("Code"));
+    tableRowHead.append($("<th></th>").text("Rank"));
+    tableRowHead.append($("<th></th>").text("Experience"));
+    tableRowHead.append($("<th></th>").text("Status"));
+    tableRowHead.append($("<th></th>").text("Given Name"));
+    tableRowHead.append($("<th></th>").text("Family Name"));
+    parent.append(tableRowHead);
     for(let i = 0; i < courseList.length; i++) {
-        if(courseList[i].tasList.length >0){
-            let courseCode = $('<li></li>').text(courseList[i].coursename);
-            parent.append(courseCode);
-        }
-        let coursetmp = $('<ol></ol>');
+        courseList[i].tasList.sort(compareCourse);
         for(let j =0; j < courseList[i].tasList.length; j++){
-            //alert(courseList[i].tasList[j].givenname);
-            let tmp = $('<li></li>').text(courseList[i].tasList[j].rank + ' '+ 
-                        courseList[i].tasList[j].experience + ' ' +
-                        courseList[i].tasList[j].status + ' ' +
-                        courseList[i].tasList[j].givenname + ' ' +
-                        courseList[i].tasList[j].familyname);
-            coursetmp.append(tmp);
+            let tableRow = $("<tr></tr>");
+            tableRow.append($("<td></td>").text(courseList[i].coursename));
+            tableRow.append($("<td></td>").text(courseList[i].tasList[j].rank));
+            tableRow.append($("<td></td>").text(courseList[i].tasList[j].experience));
+            tableRow.append($("<td></td>").text(courseList[i].tasList[j].status));
+            tableRow.append($("<td></td>").text(courseList[i].tasList[j].givenname));
+            tableRow.append($("<td></td>").text(courseList[i].tasList[j].familyname));
+            parent.append(tableRow);
         }   
-        parent.append(coursetmp);
     }
 }
 
