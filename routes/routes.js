@@ -16,10 +16,9 @@ fs.readFile('courses.json', 'utf-8', function(err, data) {
     coursesObj = JSON.parse(data);
 });
 
+//Return list of applicants
 exports.allAppl = function(req, res) {
-	//TODO: Return objects with only significant info
 	console.log(req.query);
-	console.log("Type: "+req.type);
 	//List of TAs to return
 	var returnList = [];
 	//If a status query is provided
@@ -28,22 +27,41 @@ exports.allAppl = function(req, res) {
 		var statusStr = req.query.status.substr(1,req.query.status.length-2);
 		//compare string to all TA object status
 		for(var i = 0; i < tasObj.tas.length;i++){
-			//console.log(statusStr.localeCompare(tasObj.tas[i].status) == 0);
+			//compare query status to TA status
 			if(statusStr.localeCompare(tasObj.tas[i].status) == 0){
-				returnList.push(tasObj.tas[i]);
+				//create new Ta object with only relevant info
+				var newTa = {"stunum": tasObj.tas[i].stunum, 
+							"givenname": tasObj.tas[i].givenname,
+							"familyname": tasObj.tas[i].familyname,
+							"status": tasObj.tas[i].status,
+							"year":tasObj.tas[i].year}
+				returnList.push(newTa);
 			}
 		}
-		console.log(returnList);
-	} else if(req.query.fname != undefined){
+	} else if(req.query.fname != undefined){ //if family name query is provided
 		var fnameStr = req.query.fname.substr(1,req.query.fname.length-2);
 		for(var i = 0; i < tasObj.tas.length;i++){
 			//console.log(fnameStr.localeCompare(tasObj.tas[i].fname) == 0);
 			if(fnameStr.localeCompare(tasObj.tas[i].familyname) == 0){
-				returnList.push(tasObj.tas[i]);
+				var newTa = {"stunum": tasObj.tas[i].stunum, 
+							"givenname": tasObj.tas[i].givenname,
+							"familyname": tasObj.tas[i].familyname,
+							"status": tasObj.tas[i].status,
+							"year":tasObj.tas[i].year,
+							"courses": tasObj.tas[i].courses}
+				returnList.push(newTa);
 			}
 		}
-	} else{
-		returnList = tasObj.tas;
+	} else{	//No query provided
+		for(var i = 0; i < tasObj.tas.length;i++){
+			//console.log(fnameStr.localeCompare(tasObj.tas[i].fname) == 0);
+			var newTa = {"stunum": tasObj.tas[i].stunum, 
+						"givenname": tasObj.tas[i].givenname,
+						"familyname": tasObj.tas[i].familyname,
+						"status": tasObj.tas[i].status,
+						"year":tasObj.tas[i].year}
+			returnList.push(newTa);
+		}
 	}
 	//Create a object to return
 	var returnObj = {"tas":returnList};
@@ -51,25 +69,29 @@ exports.allAppl = function(req, res) {
 	res.send(JSON.stringify(returnObj));
 };
 
+//Add new applicant
 exports.addAppl = function(req, res) {
+	//TODO: fix this, I broke it :(
     console.log(req.body);
-    var newta = req.body;
-    var found = false;
+    //create new Ta from form info
+    var newTa = req.body;
+    //set errors to false, unless error found
+    var err = false;
+    //Set result text to error, unless sucessful
    	var result = {"text": "Error: duplicate student number"};
-
-    for(var i = 0; i < tasObj.tas.length;i++){
-		if(newta.stunum.localeCompare(tasObj.tas[i].stunum) == 0){
+	for(var i = 0; i < tasObj.tas.length;i++){
+		if(newTa.stunum.localeCompare(tasObj.tas[i].stunum) == 0){
 			//Duplicate student TA number
-			found = true;
+			err = true;
 		}
-	}
+	} 
     
-    if(!found){
-    	tasObj.tas.push(newta);
+    if(!err){
+    	//No error found, add new TA
+    	tasObj.tas.push(newTa);
+    	//Set text to sucess
     	result.text = "Success";
     }
-    
-    console.log(result);
     console.log(JSON.stringify(tasObj));
     console.log(JSON.stringify(result));
     res.send(JSON.stringify(result));
@@ -143,12 +165,12 @@ exports.findCourses = function(req, res) {
 				var courseIndex = courseIndexList.indexOf(tasObj.tas[i].courses[j].code);
 				console.log(courseIndex);
 				if ( courseIndex > 0){
-					var newta = {rank: tasObj.tas[i].courses[j].rank,
+					var newTa = {rank: tasObj.tas[i].courses[j].rank,
 						experience:tasObj.tas[i].courses[j].experience,
 					 	status: tasObj.tas[i].status,
 					 	givenname: tasObj.tas[i].givenname,
 					 	familyname: tasObj.tas[i].familyname};
-					courseList[courseIndex].tasList.push(newta);
+					courseList[courseIndex].tasList.push(newTa);
 				}			
 			}
 		}

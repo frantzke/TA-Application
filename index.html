@@ -17,7 +17,8 @@
 			<li><a href="#ApplByNameDiv">Search by Family Name</a></li>
 			<li><a href="#AddApplDiv">Add Applicant</a></li>
 			<li><a href="#RemoveApplDiv">Remove Applicant</a></li>
-			<li><a href="#AllCoursDiv">Search For Course</a></li>
+			<li><a href="#AllCoursDiv">Courses</a></li>
+			<li><a href="#SearchCourseDiv">Search For Course</a></li>
 		</ul>
 	  	<div id = "menu">
 	  		<div id="AllApplDiv">
@@ -25,7 +26,8 @@
 					<p>List All Applicants</p>
 				  	<input id="AllApplbutton" type="submit" value="List All Applicants">
 			  	</form>
-			  	<ol id="AllApplResult"></ol>
+			  	<!--<ol id="AllApplResult"></ol>-->
+			  	<table id="AllApplResult"></table>
 		  	</div>
 		  	<div id="ApplStatusDiv">
 				<form id="ApplByStatus" method="get">
@@ -39,7 +41,8 @@
 				  	</select>
 					<input id="ApplByStatusButton" type="submit" value="Search Applicants by Status">
 				</form>
-				<ol id="ApplByStatusResult"></ol>
+				<!--<ol id="ApplByStatusResult"></ol>-->
+				<table id="ApplByStatusResult"></table>
 		  </div>
 		  <div id="ApplByNameDiv">
 			  <form id = "ApplByName" method="get">
@@ -48,6 +51,8 @@
 					<input type="submit" id="ApplByNameButton" value="Search Applicants by Family Name" />
 			  </form>
 			  <ol id="ApplByNameResult"></ol>
+			  <table id="ApplByNameTable"></table>
+			  <table id="ApplByNameCourseTable"></table>
 		  </div>
 		  <div id="AddApplDiv">
 				<form id="AddAppl" method="post">

@@ -18,6 +18,10 @@ function compare(ta,otherTa) {
     return 0;
 }
 
+function compareCourse(c1,c2){
+    return c1.rank - c2.rank;
+}
+
 //Print a list of TAs
 function printList(taList, printLocation){
     //Sorts list by family name
@@ -25,35 +29,54 @@ function printList(taList, printLocation){
     let parent = $(printLocation);
     //clear field
     parent.empty();
+    let tableRow = $("<tr></tr>");
+    tableRow.append($("<th></th>").text("Given Name"));
+    tableRow.append($("<th></th>").text("Family Name"));
+    tableRow.append($("<th></th>").text("Status"));
+    tableRow.append($("<th></th>").text("Year"));
+    parent.append(tableRow);
     for(let i = 0; i < taList.length; i++) {
-        let tmp = $('<li>').text(taList[i].givenname + '  ' + 
-                             taList[i].familyname + ' ' +
-                             taList[i].status + ' ' +
-                             taList[i].year);
-        parent.append(tmp);
+        let tableRow = $("<tr></tr>");
+        tableRow.append($("<td></td>").text(taList[i].givenname));
+        tableRow.append($("<td></td>").text(taList[i].familyname));
+        tableRow.append($("<td></td>").text(taList[i].status));
+        tableRow.append($("<td></td>").text(taList[i].year));
+        parent.append(tableRow);
     }
 }
 
 //print a single applicant
 function printApplicant(ta){
-    let parent = $("#ApplByNameResult");
-    //clear field
+    let parent = $("#ApplByNameTable");
     parent.empty();
-    let taInfo = $("<li></li>").text(ta.givenname + ' ' +
-        ta.familyname + ' ' +
-        ta.status + ' ' +
-        ta.year + ' ');
-    parent.append(taInfo);
-    let courseList = $('<ol></ol>');
-    //parent.append(courseList);
+    let tableRowHead = $("<tr></tr>");
+    tableRowHead.append($("<th></th>").text("Given Name"));
+    tableRowHead.append($("<th></th>").text("Family Name"));
+    tableRowHead.append($("<th></th>").text("Status"));
+    tableRowHead.append($("<th></th>").text("Year"));
+    parent.append(tableRowHead);
+    let tableRow = $("<tr></tr>");
+    tableRow.append($("<td></td>").text(ta.givenname));
+    tableRow.append($("<td></td>").text(ta.familyname));
+    tableRow.append($("<td></td>").text(ta.status));
+    tableRow.append($("<td></td>").text(ta.year));
+    parent.append(tableRow);
+    let courseParent = $("#ApplByNameCourseTable");
+    courseParent.empty();
+    //Sort Courses by rank
+    ta.courses.sort(compareCourse);
+    let tableRowCourseHead = $("<tr></tr>");
+    tableRowCourseHead.append($("<th></th>").text("Code"));
+    tableRowCourseHead.append($("<th></th>").text("Rank"));        
+    tableRowCourseHead.append($("<th></th>").text("Experience"));
+    courseParent.append(tableRowCourseHead);
     for(let j =0; j < ta.courses.length; j++){
-        //alert(courseList[i].tasList[j].givenname);
-        let course = $('<li></li>').text(ta.courses[j].code + ' ' + 
-                    ta.courses[j].rank + ' '+ 
-                    ta.courses[j].experience);
-        courseList.append(course);
+        let tableRow = $("<tr></tr>");
+        tableRow.append($("<td></td>").text(ta.courses[j].code));
+        tableRow.append($("<td></td>").text(ta.courses[j].rank));        
+        tableRow.append($("<td></td>").text(ta.courses[j].experience));
+        courseParent.append(tableRow);
     }   
-    parent.append(courseList);
 }
 
 function printCourses(courseList, printLocation){
@@ -129,18 +152,17 @@ $(document).ready(function() {
 
     //Add applicant button
     $("#AddAppl").submit(function (e) {
-        //TODO: Check duplicates
         e.preventDefault();
         console.log($('form').serialize());
-        $.post('/applicants', $('#AddAppl').serialize());
         $.ajax({
             url: '/applicants' ,
             type: 'POST',
+            data: $('#AddAppl').serialize(),
             success: function(res) {
                 //Print Success or Error: duplicate student number
                 resultObj = JSON.parse(res);
                 let result = $('#AddApplResult');
-                alert(resultObj.text);
+                //alert(resultObj.text);
                 result.text(resultObj.text);
             }
         });
@@ -152,7 +174,7 @@ $(document).ready(function() {
         var name = $('#ApplName').val();
         $.get("/applicants?fname='"+name+"'", function(data){
             let taObj = JSON.parse(data);
-            printList(taObj.tas, "#ApplByNameResult");
+            //printList(taObj.tas, "#ApplByNameResult");
             if(taObj.tas[0] != undefined){
                 printApplicant(taObj.tas[0]);
             }
