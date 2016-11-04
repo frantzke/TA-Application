@@ -1,89 +1,2165 @@
 {
-    "tas": [ 
+    "tas": [
         {
-            "stunum": "111222333",
-            "givenname": "Maurice",
-            "familyname": "Wilkes",
-            "status": "Msc",
-            "year": "2",
-            "courses": [
-                {
-                    "code": "CSC108",
-                    "rank": "1",
-                    "experience": "3"
-                },
-                {
-                    "code": "CSC343",
-                    "rank": "1",
-                    "experience": "2"
-                },
-                {
-                    "code": "CSC236",
-                    "rank": "2",
-                    "experience": "0"
-                    
-                },
-                {
-                    "code": "CSC318",
-                    "rank": "4",
-                    "experience": "0"
-                }
-            ]
-        },
-        {
-            "stunum": "222333444",
-            "givenname": "Alan",
-            "familyname": "Perlis",
+            "givenname": "Whitfield",
             "status": "PhD",
-            "year": "3",
+            "stunum": "1581387733",
             "courses": [
                 {
-                    "code": "CSC108",
-                    "rank": "1",
-                    "experience": "3"
-                },
-                {
-                    "code": "CSC236",
                     "rank": "3",
-                    "experience": "0"
+                    "experience": "0",
+                    "code": "CSC358"
                 }
-            ]
+            ],
+            "year": "2",
+            "familyname": "Diffie"
         },
         {
-            "stunum": "333444555",
-            "givenname": "Richard",
-            "familyname": "Hamming",
-            "status": "Undergrad",
-            "year": "3",
+            "givenname": "Martin",
+            "status": "MScAc",
+            "stunum": "1020452913",
             "courses": [
                 {
-                    "code": "CSC108",
                     "rank": "2",
-                    "experience": "1"
+                    "experience": "0",
+                    "code": "CSC336"
                 },
                 {
-                    "code": "CSC148",
-                    "rank": "1",
-                    "experience": "0"
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC343"
                 },
                 {
-                    "code": "CSC236",
                     "rank": "4",
-                    "experience": "1"
-                    
+                    "experience": "3",
+                    "code": "CSC148"
                 },
                 {
-                    "code": "CSC304",
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC104"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC318"
+                },
+                {
                     "rank": "1",
-                    "experience": "1"
-                },
-                {
-                    "code": "CSC369",
-                    "rank": "4",
-                    "experience": "2"
+                    "experience": "2",
+                    "code": "CSC373"
                 }
-                
-            ]
+            ],
+            "year": "6",
+            "familyname": "Hellman"
+        },
+        {
+            "givenname": "Michael",
+            "status": "PhD",
+            "stunum": "1442809551",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC318"
+                },
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC373"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC207"
+                }
+            ],
+            "year": "6",
+            "familyname": "Stonebraker"
+        },
+        {
+            "givenname": "Leslie",
+            "status": "MEng",
+            "stunum": "1039080884",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "3",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "2",
+                    "experience": "2",
+                    "code": "CSC104"
+                }
+            ],
+            "year": "5",
+            "familyname": "Lamport"
+        },
+        {
+            "givenname": "Shafi",
+            "status": "MScAc",
+            "stunum": "1300076999",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC258"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC369"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC304"
+                }
+            ],
+            "year": "2",
+            "familyname": "Goldwasser"
+        },
+        {
+            "givenname": "Silvio",
+            "status": "MSc",
+            "stunum": "1656901105",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC258"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC343"
+                }
+            ],
+            "year": "4",
+            "familyname": "Micali"
+        },
+        {
+            "givenname": "Judea",
+            "status": "Undergrad",
+            "stunum": "1151484163",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC301"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC258"
+                }
+            ],
+            "year": "5",
+            "familyname": "Pearl"
+        },
+        {
+            "givenname": "Leslie Gabriel",
+            "status": "Undergrad",
+            "stunum": "1695262298",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "3",
+                    "code": "CSC104"
+                },
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC309"
+                }
+            ],
+            "year": "6",
+            "familyname": "Valiant"
+        },
+        {
+            "givenname": "Charles P.",
+            "status": "MScAc",
+            "stunum": "1741044522",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC336"
+                }
+            ],
+            "year": "3",
+            "familyname": "Thacker"
+        },
+        {
+            "givenname": "Barbara",
+            "status": "MEng",
+            "stunum": "1934763133",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "3",
+                    "code": "CSC318"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC300"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC301"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC373"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC343"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC304"
+                }
+            ],
+            "year": "4",
+            "familyname": "Liskov"
+        },
+        {
+            "givenname": "Edmund Melson",
+            "status": "MSc",
+            "stunum": "1259474438",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC358"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC165"
+                }
+            ],
+            "year": "3",
+            "familyname": "Clarke"
+        },
+        {
+            "givenname": "E. Allen",
+            "status": "MScAc",
+            "stunum": "1906074570",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC263"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC324"
+                }
+            ],
+            "year": "5",
+            "familyname": "Emerson"
+        },
+        {
+            "givenname": "Joseph",
+            "status": "MEng",
+            "stunum": "1667694541",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC358"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC165"
+                }
+            ],
+            "year": "5",
+            "familyname": "Sifakis"
+        },
+        {
+            "givenname": "Frances Elizabeth",
+            "status": "PhD",
+            "stunum": "1024765415",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC263"
+                },
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC209"
+                }
+            ],
+            "year": "1",
+            "familyname": "Allen"
+        },
+        {
+            "givenname": "Peter",
+            "status": "MScAc",
+            "stunum": "1696230270",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "3",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC263"
+                }
+            ],
+            "year": "3",
+            "familyname": "Naur"
+        },
+        {
+            "givenname": "Vinton Gray",
+            "status": "MEng",
+            "stunum": "1720311225",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC104"
+                },
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC373"
+                },
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC148"
+                },
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC343"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC336"
+                }
+            ],
+            "year": "3",
+            "familyname": "Cerf"
+        },
+        {
+            "givenname": "Robert Elliot",
+            "status": "MEng",
+            "stunum": "1738072113",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC336"
+                }
+            ],
+            "year": "1",
+            "familyname": "Kahn"
+        },
+        {
+            "givenname": "Alan",
+            "status": "PhD",
+            "stunum": "1673552390",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC373"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC369"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC236"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC301"
+                }
+            ],
+            "year": "5",
+            "familyname": "Kay"
+        },
+        {
+            "givenname": "Leonard Max",
+            "status": "MEng",
+            "stunum": "1482666181",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC373"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC148"
+                }
+            ],
+            "year": "4",
+            "familyname": "Adleman"
+        },
+        {
+            "givenname": "Ronald Linn",
+            "status": "MSc",
+            "stunum": "1708941560",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC343"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC148"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC263"
+                }
+            ],
+            "year": "6",
+            "familyname": "Rivest"
+        },
+        {
+            "givenname": "Adi",
+            "status": "MSc",
+            "stunum": "1130059300",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "3",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC263"
+                },
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC300"
+                }
+            ],
+            "year": "1",
+            "familyname": "Shamir"
+        },
+        {
+            "givenname": "Ole-Johan",
+            "status": "PhD",
+            "stunum": "1302226116",
+            "courses": [
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC373"
+                },
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC258"
+                }
+            ],
+            "year": "5",
+            "familyname": "Dahl"
+        },
+        {
+            "givenname": "Kristen",
+            "status": "MScAc",
+            "stunum": "1895089015",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC358"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC104"
+                }
+            ],
+            "year": "5",
+            "familyname": "Nygaard"
+        },
+        {
+            "givenname": "Andrew Chi-Chih",
+            "status": "PhD",
+            "stunum": "1423648149",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC258"
+                }
+            ],
+            "year": "6",
+            "familyname": "Yao"
+        },
+        {
+            "givenname": "Frederick",
+            "status": "MScAc",
+            "stunum": "1384355478",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC258"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC148"
+                },
+                {
+                    "rank": "2",
+                    "experience": "3",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC369"
+                }
+            ],
+            "year": "6",
+            "familyname": "Brooks"
+        },
+        {
+            "givenname": "James Nicholas",
+            "status": "Undergrad",
+            "stunum": "1303971160",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "2",
+                    "experience": "3",
+                    "code": "CSC258"
+                },
+                {
+                    "rank": "5",
+                    "experience": "3",
+                    "code": "CSC373"
+                },
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC108"
+                }
+            ],
+            "year": "2",
+            "familyname": "Gray"
+        },
+        {
+            "givenname": "Douglas",
+            "status": "Undergrad",
+            "stunum": "1305960483",
+            "courses": [
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC358"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC148"
+                }
+            ],
+            "year": "4",
+            "familyname": "Engelbart"
+        },
+        {
+            "givenname": "Amir",
+            "status": "PhD",
+            "stunum": "1611824907",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC301"
+                },
+                {
+                    "rank": "5",
+                    "experience": "3",
+                    "code": "CSC148"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC358"
+                }
+            ],
+            "year": "4",
+            "familyname": "Pnueli"
+        },
+        {
+            "givenname": "Manuel",
+            "status": "Undergrad",
+            "stunum": "1361764873",
+            "courses": [
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC324"
+                }
+            ],
+            "year": "6",
+            "familyname": "Blum"
+        },
+        {
+            "givenname": "Edward A",
+            "status": "Undergrad",
+            "stunum": "1759012527",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC369"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "2",
+                    "experience": "3",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC318"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC148"
+                },
+                {
+                    "rank": "2",
+                    "experience": "2",
+                    "code": "CSC300"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC263"
+                }
+            ],
+            "year": "6",
+            "familyname": "Feigenbaum"
+        },
+        {
+            "givenname": "Dabbala Rajagopal",
+            "status": "Undergrad",
+            "stunum": "1383316813",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC207"
+                }
+            ],
+            "year": "3",
+            "familyname": "Reddy"
+        },
+        {
+            "givenname": "Juris",
+            "status": "MSc",
+            "stunum": "1267713064",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "3",
+                    "code": "CSC324"
+                }
+            ],
+            "year": "5",
+            "familyname": "Hartmanis"
+        },
+        {
+            "givenname": "Richard Edwin",
+            "status": "PhD",
+            "stunum": "1004640371",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "2",
+                    "experience": "2",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC369"
+                },
+                {
+                    "rank": "5",
+                    "experience": "3",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC207"
+                }
+            ],
+            "year": "3",
+            "familyname": "Stearns"
+        },
+        {
+            "givenname": "Butler W",
+            "status": "Undergrad",
+            "stunum": "1981699598",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC263"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC318"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC300"
+                },
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC236"
+                }
+            ],
+            "year": "3",
+            "familyname": "Lampson"
+        },
+        {
+            "givenname": "Arthur John Robin Gorell",
+            "status": "MEng",
+            "stunum": "1116950710",
+            "courses": [
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC104"
+                }
+            ],
+            "year": "4",
+            "familyname": "Milner"
+        },
+        {
+            "givenname": "Fernando J",
+            "status": "Undergrad",
+            "stunum": "1134857897",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC343"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC301"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC302"
+                }
+            ],
+            "year": "4",
+            "familyname": "Corbato"
+        },
+        {
+            "givenname": "William Morton",
+            "status": "MSc",
+            "stunum": "1395435888",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC236"
+                },
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC104"
+                }
+            ],
+            "year": "4",
+            "familyname": "Kahan"
+        },
+        {
+            "givenname": "Ivan",
+            "status": "MSc",
+            "stunum": "1958175127",
+            "courses": [
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "2",
+                    "experience": "2",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC148"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC318"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC369"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC304"
+                }
+            ],
+            "year": "6",
+            "familyname": "Sutherland"
+        },
+        {
+            "givenname": "John",
+            "status": "PhD",
+            "stunum": "1124822614",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC258"
+                }
+            ],
+            "year": "5",
+            "familyname": "Cocke"
+        },
+        {
+            "givenname": "John E",
+            "status": "MSc",
+            "stunum": "1032856746",
+            "courses": [
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC209"
+                }
+            ],
+            "year": "1",
+            "familyname": "Hopcroft"
+        },
+        {
+            "givenname": "Robert Endre",
+            "status": "MSc",
+            "stunum": "1459440232",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC318"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC236"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "2",
+                    "experience": "2",
+                    "code": "CSC258"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC104"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC309"
+                }
+            ],
+            "year": "5",
+            "familyname": "Tarjan"
+        },
+        {
+            "givenname": "Richard Manning",
+            "status": "PhD",
+            "stunum": "1408501062",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC263"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC104"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "5",
+                    "experience": "3",
+                    "code": "CSC318"
+                },
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC301"
+                }
+            ],
+            "year": "6",
+            "familyname": "Karp"
+        },
+        {
+            "givenname": "Niklaus E",
+            "status": "MSc",
+            "stunum": "1649446421",
+            "courses": [
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC343"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC369"
+                },
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC358"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC263"
+                }
+            ],
+            "year": "2",
+            "familyname": "Wirth"
+        },
+        {
+            "givenname": "Dennis M.",
+            "status": "MEng",
+            "stunum": "1276115141",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC373"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC369"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC301"
+                }
+            ],
+            "year": "6",
+            "familyname": "Ritchie"
+        },
+        {
+            "givenname": "Kenneth Lane",
+            "status": "PhD",
+            "stunum": "1733381653",
+            "courses": [
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC301"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC318"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC343"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC300"
+                }
+            ],
+            "year": "4",
+            "familyname": "Thompson"
+        },
+        {
+            "givenname": "Stephen Arthur",
+            "status": "Undergrad",
+            "stunum": "1146807832",
+            "courses": [
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC104"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC209"
+                }
+            ],
+            "year": "2",
+            "familyname": "Cook"
+        },
+        {
+            "givenname": "Edgar F",
+            "status": "Undergrad",
+            "stunum": "1880632809",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC300"
+                },
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC384"
+                }
+            ],
+            "year": "6",
+            "familyname": "Codd"
+        },
+        {
+            "givenname": "C. Antony R.",
+            "status": "PhD",
+            "stunum": "1244216447",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC104"
+                },
+                {
+                    "rank": "2",
+                    "experience": "2",
+                    "code": "CSC318"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "2",
+                    "experience": "3",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC373"
+                }
+            ],
+            "year": "6",
+            "familyname": "Hoare"
+        },
+        {
+            "givenname": "Kenneth E.",
+            "status": "MSc",
+            "stunum": "1445406729",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC384"
+                }
+            ],
+            "year": "2",
+            "familyname": "Iverson"
+        },
+        {
+            "givenname": "Robert (Bob) W",
+            "status": "MScAc",
+            "stunum": "1211511274",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "1",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC301"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC104"
+                },
+                {
+                    "rank": "2",
+                    "experience": "2",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "5",
+                    "experience": "3",
+                    "code": "CSC358"
+                }
+            ],
+            "year": "5",
+            "familyname": "Floyd"
+        },
+        {
+            "givenname": "John",
+            "status": "MSc",
+            "stunum": "1958679242",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC108"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC301"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC343"
+                },
+                {
+                    "rank": "2",
+                    "experience": "2",
+                    "code": "CSC258"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC263"
+                }
+            ],
+            "year": "6",
+            "familyname": "Backus"
+        },
+        {
+            "givenname": "Michael O.",
+            "status": "MScAc",
+            "stunum": "1408356116",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC300"
+                }
+            ],
+            "year": "4",
+            "familyname": "Rabin"
+        },
+        {
+            "givenname": "Dana Stewart",
+            "status": "MScAc",
+            "stunum": "1101682307",
+            "courses": [
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC258"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC369"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC336"
+                }
+            ],
+            "year": "4",
+            "familyname": "Scott"
+        },
+        {
+            "givenname": "Allen",
+            "status": "MSc",
+            "stunum": "1752595911",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "4",
+                    "experience": "3",
+                    "code": "CSC324"
+                },
+                {
+                    "rank": "5",
+                    "experience": "0",
+                    "code": "CSC263"
+                }
+            ],
+            "year": "3",
+            "familyname": "Newell"
+        },
+        {
+            "givenname": "Herbert Alexander",
+            "status": "Undergrad",
+            "stunum": "1604567647",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "3",
+                    "code": "CSC302"
+                },
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "2",
+                    "experience": "2",
+                    "code": "CSC358"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC236"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC258"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC309"
+                }
+            ],
+            "year": "1",
+            "familyname": "Simon"
+        },
+        {
+            "givenname": "Donald (\"Don\") Ervin",
+            "status": "MEng",
+            "stunum": "1679400911",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC207"
+                }
+            ],
+            "year": "1",
+            "familyname": "Knuth"
+        },
+        {
+            "givenname": "Charles William",
+            "status": "MEng",
+            "stunum": "1841500611",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC320"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC369"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC300"
+                },
+                {
+                    "rank": "2",
+                    "experience": "2",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC358"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC302"
+                }
+            ],
+            "year": "2",
+            "familyname": "Bachman"
+        },
+        {
+            "givenname": "Edsger Wybe",
+            "status": "MScAc",
+            "stunum": "1065826483",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC263"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "4",
+                    "experience": "0",
+                    "code": "CSC369"
+                }
+            ],
+            "year": "5",
+            "familyname": "Dijkstra"
+        },
+        {
+            "givenname": "John",
+            "status": "MScAc",
+            "stunum": "1151321885",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "3",
+                    "code": "CSC236"
+                },
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC369"
+                },
+                {
+                    "rank": "1",
+                    "experience": "2",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC300"
+                }
+            ],
+            "year": "5",
+            "familyname": "McCarthy"
+        },
+        {
+            "givenname": "James Hardy",
+            "status": "MScAc",
+            "stunum": "1935762386",
+            "courses": [
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC336"
+                }
+            ],
+            "year": "1",
+            "familyname": "Wilkinson"
+        },
+        {
+            "givenname": "Marvin",
+            "status": "Undergrad",
+            "stunum": "1289887561",
+            "courses": [
+                {
+                    "rank": "1",
+                    "experience": "0",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "3",
+                    "experience": "1",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC207"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC148"
+                }
+            ],
+            "year": "3",
+            "familyname": "Minsky"
+        },
+        {
+            "givenname": "Richard W",
+            "status": "MSc",
+            "stunum": "1627338244",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC384"
+                },
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC318"
+                },
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC148"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC304"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "1",
+                    "experience": "1",
+                    "code": "CSC301"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC236"
+                },
+                {
+                    "rank": "2",
+                    "experience": "1",
+                    "code": "CSC207"
+                }
+            ],
+            "year": "5",
+            "familyname": "Hamming"
+        },
+        {
+            "givenname": "Maurice V.",
+            "status": "Undergrad",
+            "stunum": "1525964664",
+            "courses": [
+                {
+                    "rank": "2",
+                    "experience": "0",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "4",
+                    "experience": "2",
+                    "code": "CSC263"
+                },
+                {
+                    "rank": "1",
+                    "experience": "3",
+                    "code": "CSC321"
+                },
+                {
+                    "rank": "3",
+                    "experience": "2",
+                    "code": "CSC300"
+                },
+                {
+                    "rank": "5",
+                    "experience": "3",
+                    "code": "CSC343"
+                },
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC165"
+                },
+                {
+                    "rank": "3",
+                    "experience": "3",
+                    "code": "CSC358"
+                }
+            ],
+            "year": "2",
+            "familyname": "Wilkes"
+        },
+        {
+            "givenname": "Alan J",
+            "status": "MEng",
+            "stunum": "1705252207",
+            "courses": [
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC209"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC309"
+                },
+                {
+                    "rank": "3",
+                    "experience": "0",
+                    "code": "CSC236"
+                },
+                {
+                    "rank": "4",
+                    "experience": "1",
+                    "code": "CSC336"
+                },
+                {
+                    "rank": "5",
+                    "experience": "2",
+                    "code": "CSC384"
+                }
+            ],
+            "year": "4",
+            "familyname": "Perlis"
         }
     ]
 }

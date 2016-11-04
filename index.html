@@ -6,102 +6,95 @@
     <link rel="stylesheet" href="css/style.css?v=1.0" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script  type="text/javascript" src="scripts/script.js"></script>
-
   </head>
   
   <body>
-	  	<h1>TA Applications</h1>
-	  	<ul class = "navDiv">
-			<li><a href="#AllApplDiv">Applicants</a> </li>
-			<li><a href="#ApplStatusDiv">Applicants by Status</a> </li>
-			<li><a href="#ApplByNameDiv">Search by Family Name</a></li>
-			<li><a href="#AddApplDiv">Add Applicant</a></li>
-			<li><a href="#RemoveApplDiv">Remove Applicant</a></li>
-			<li><a href="#AllCoursDiv">Courses</a></li>
-			<li><a href="#SearchCourseDiv">Search For Course</a></li>
-		</ul>
-	  	<div id = "menu">
-	  		<div id="AllApplDiv">
-			  	<form id="AllAppl" method="get">
-					<p>List All Applicants</p>
-				  	<input id="AllApplbutton" type="submit" value="List All Applicants">
-			  	</form>
-			  	<!--<ol id="AllApplResult"></ol>-->
-			  	<table id="AllApplResult"></table>
-		  	</div>
-		  	<div id="ApplStatusDiv">
-				<form id="ApplByStatus" method="get">
-					<p>Search By Applicant Status</p>
-				  	<select id="statusSelect" onchange="selectStatus()">
-				    	<option>Undergrad</option>
-				    	<option>Msc</option>
-				    	<option>PhD</option>
-				    	<option>MScAC</option>
-				    	<option>MEng</option>
-				  	</select>
-					<input id="ApplByStatusButton" type="submit" value="Search Applicants by Status">
-				</form>
-				<!--<ol id="ApplByStatusResult"></ol>-->
-				<table id="ApplByStatusResult"></table>
-		  </div>
-		  <div id="ApplByNameDiv">
-			  <form id = "ApplByName" method="get">
-			  		<p>Search By Family Name</p>
-				  	<input type="text" name="familyname" id="ApplName" />
-					<input type="submit" id="ApplByNameButton" value="Search Applicants by Family Name" />
-			  </form>
-			  <ol id="ApplByNameResult"></ol>
-			  <table id="ApplByNameTable"></table>
-			  <table id="ApplByNameCourseTable"></table>
-		  </div>
-		  <div id="AddApplDiv">
-				<form id="AddAppl" method="post">
-					<p>Add Applicant</p>
-					<p>Student Number</p>
-					<input type="text" name="stunum" /></input>
-					<p>Given Name</p>
-					<input type="text" name="givenname"></input>
-					<p>Family Name</p>
-					<input type="text" name="familyname"></input>
-					<p>Status</p>
-					<input type="text" name="status"></input>
-					<p>Year</p>
-					<input type="text" name="year"></input>
-					<input type= "hidden" name="courses[]"></input>
-					<input id="addButton" type="submit" value="Submit"></input>
-			  	</form>
-			  	<p id="AddApplResult"></p>
-		  </div>
-		  <div id="RemoveApplDiv">
-		  		<form id="RemoveByStunum" method="delete">
-					<p>Remove Applicant</p>
-					<input type="text" id="removeStunum" name="stunum" /></input>
-					<input id="removeStunumButton" type="submit" value="Remove by Student Number"></input>
-			  	</form>
-			  	<form id="RemoveByfname" method="delete">
-					<p>Remove Applicant</p>
-					<input type="text" id="removefname" name="fname" /></input>
-					<input id="removefnameButton" type="submit" value="Remove by Family Name"></input>
-			  	</form>
-		  </div>
-		  <div id="AllCoursDiv">
-		  		<form id = "AllCourses">
-		  			<p>List All Courses</p>
-			 		<input id="AllCoursesButton" type="submit" value="List All Courses"></input>
-			  	</form>
-			  	<!--<ol id="AllCoursesResult"></ol>-->
-			  	<table id="AllCoursesResult"></table>
-		  </div>
-		  <div id="SearchCourseDiv">
-		  		<form id="SearchCourse">
-					<p>Search For Course by Name</p>
-					<input type="text" name="cours-name" id="cours-name" />
-			 		<input id="SearchCoursesButton" type="submit" value="Search Course by Name"></input>
-			  	</form>
-			  	<!--<ol id="SearchCoursesResult"></ol>-->
-			  	<table id="SearchCoursesResult"></table>
-		  </div>
-	  </div>
-	  <ol id="results"></ol>
+  	<h1>TA Applications</h1>
+  	<ul class = "navDiv">
+		<li><a href="#AllApplDiv">Applicants</a> </li>
+		<li><a href="#ApplStatusDiv">Applicants by Status</a> </li>
+		<li><a href="#ApplByNameDiv">Search by Family Name</a></li>
+		<li><a href="#AddApplDiv">Add Applicant</a></li>
+		<li><a href="#RemoveApplDiv">Remove Applicant</a></li>
+		<li><a href="#AllCoursDiv">Courses</a></li>
+		<li><a href="#SearchCourseDiv">Search For Course</a></li>
+	</ul>
+	<div id="AllApplDiv">
+	  	<form id="AllAppl" method="get">
+			<p>List All Applicants</p>
+		  	<input id="AllApplbutton" type="submit" value="List All Applicants">
+	  	</form>
+	  	<table id="AllApplResult"></table>
+	</div>
+  	<div id="ApplStatusDiv">
+		<form id="ApplByStatus" method="get">
+			<p>Search By Applicant Status</p>
+		  	<select id="statusSelect" onchange="selectStatus()">
+		    	<option>Undergrad</option>
+		    	<option>MSc</option>
+		    	<option>PhD</option>
+		    	<option>MScAc</option>
+		    	<option>MEng</option>
+		  	</select>
+			<input id="ApplByStatusButton" type="submit" value="Search Applicants by Status">
+		</form>
+		<table id="ApplByStatusResult"></table>
+  	</div>
+	<div id="ApplByNameDiv">
+	  <form id = "ApplByName" method="get">
+	  		<p>Search By Family Name</p>
+		  	<input type="text" name="familyname" id="ApplName" />
+			<input type="submit" id="ApplByNameButton" value="Search Applicants by Family Name" />
+	  </form>
+	  <table id="ApplByNameTable"></table>
+	  <table id="ApplByNameCourseTable"></table>
+	  <p id="ApplFailResult"></p>
+	</div>
+	<div id="AddApplDiv">
+		<form id="AddAppl" method="post">
+			<p>Add Applicant</p>
+			<p>Student Number</p>
+			<input type="text" name="stunum" /></input>
+			<p>Given Name</p>
+			<input type="text" name="givenname"></input>
+			<p>Family Name</p>
+			<input type="text" name="familyname"></input>
+			<p>Status</p>
+			<input type="text" name="status"></input>
+			<p>Year</p>
+			<input type="text" name="year"></input>
+			<input type= "hidden" name="courses[]"></input>
+			<input id="addButton" type="submit" value="Submit"></input>
+	  	</form>
+	  	<p id="AddApplResult"></p>
+	</div>
+	<div id="RemoveApplDiv">
+		<form id="RemoveByStunum" method="delete">
+			<p>Remove Applicant</p>
+			<input type="text" id="removeStunum" name="stunum" /></input>
+			<input id="removeStunumButton" type="submit" value="Remove by Student Number"></input>
+	  	</form>
+	  	<form id="RemoveByfname" method="delete">
+			<p>Remove Applicant</p>
+			<input type="text" id="removefname" name="fname" /></input>
+			<input id="removefnameButton" type="submit" value="Remove by Family Name"></input>
+	  	</form>
+	  	<p id="RemoveResult"></p>
+	</div>
+	<div id="AllCoursDiv">
+		<form id = "AllCourses">
+			<p>List All Courses</p>
+ 			<input id="AllCoursesButton" type="submit" value="List All Courses"></input>
+	  	</form>
+	  	<table id="AllCoursesResult"></table>
+	</div>
+	<div id="SearchCourseDiv">
+		<form id="SearchCourse">
+			<p>Search For Course by Name</p>
+			<input type="text" name="cours-name" id="cours-name" />
+	 		<input id="SearchCoursesButton" type="submit" value="Search Course by Name"></input>
+	  	</form>
+	  	<table id="SearchCoursesResult"></table>
+	</div>
   </body>
 </html>

@@ -21,7 +21,6 @@ app.get('/', function(req, res) {
     res.sendfile('index.html');
 });
 
-//TODO: Server functions go here
 app.get('/applicants', tas.allAppl);
 
 app.post('/applicants', tas.addAppl);
