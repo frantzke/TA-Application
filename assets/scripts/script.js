@@ -159,10 +159,10 @@ $(document).ready(function() {
             type: 'DELETE',
             success: function(res) {
                 //On return print the result to the page
-                resultObj = JSON.parse(res);
+                resultStr = JSON.parse(res);
                 let result = $("#RemoveResult");
-                result.text(resultObj.text);
-                alert(resultObj.text);
+                result.text(resultStr);
+                alert(resultStr);
             }
         });
     });
@@ -179,10 +179,10 @@ $(document).ready(function() {
             success: function(res) {
                 //print sucess or Error: no such student
                 //on return to the page
-                resultObj = JSON.parse(res);
+                resultStr = JSON.parse(res);
                 let result = $("#RemoveResult");
-                alert(resultObj.text);
-                result.text(resultObj.text);
+                result.text(resultStr);
+                alert(resultStr);
             }
         });
     });
@@ -197,10 +197,10 @@ $(document).ready(function() {
             data: $('#AddAppl').serialize(),
             success: function(res) {
                 //Print Success or Error: duplicate student number
-                resultObj = JSON.parse(res);
+                resultStr = JSON.parse(res);
                 let result = $('#AddApplResult');
-                result.text(resultObj.text);
-                alert(resultObj.text);
+                result.text(resultStr);
+                alert(resultStr);
             }
         });
         $('#AddAppl').trigger("reset");
@@ -213,13 +213,20 @@ $(document).ready(function() {
         $('#ApplName').val("");
         $.get("/applicants?fname='"+name+"'", function(data){
             let taObj = JSON.parse(data);
-            if(taObj.tas[0] != undefined){
+            if (taObj != undefined){
+				printApplicant(taObj);
+				$("#ApplFailResult").text("");
+			} else {
+				$("#ApplFailResult").text("Error: no such student");
+                alert("Error: no such student");
+			}
+            /*if(taObj.tas[0] != undefined){
                 printApplicant(taObj.tas[0]);
                 $("#ApplFailResult").text("");
             } else {
                 $("#ApplFailResult").text("Error: no such student");
                 alert("Error: no such student");
-            }
+            }*/
         });
     });
 

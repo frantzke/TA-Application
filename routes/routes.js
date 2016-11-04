@@ -65,10 +65,22 @@ exports.allAppl = function(req, res) {
 			returnList.push(newTa);
 		}
 	}
-	//Create a object to return
-	var returnObj = {"tas":returnList};
-	console.log(JSON.stringify(returnObj));
-	res.send(JSON.stringify(returnObj));
+	if(req.query.fname != undefined){
+		//If query is an fname query, return only TA object
+		if(returnList[0] != undefined){
+			console.log(JSON.stringify(returnList[0]));
+			res.send(JSON.stringify(returnList[0]));
+		} else {
+			console.log("Error: no such student");
+			res.send(JSON.stringify(null));
+		}
+		
+	} else{
+		//Create a object to return
+		var returnObj = {"tas":returnList};
+		console.log(JSON.stringify(returnObj));
+		res.send(JSON.stringify(returnObj));
+	}
 };
 
 //Add new applicant
@@ -93,8 +105,8 @@ exports.addAppl = function(req, res) {
     	result.text = "Success";
     }
     console.log(JSON.stringify(tasObj));
-    console.log(JSON.stringify(result));
-    res.send(JSON.stringify(result));
+    console.log(result.text);
+    res.send(JSON.stringify(result.text));
 };
 
 //Delete applicant
@@ -133,8 +145,8 @@ exports.deleteAppl = function(req, res) {
     	result.text = "Success";
     }
     console.log(JSON.stringify(tasObj));
-    console.log(JSON.stringify(result));
-    res.send(JSON.stringify(result));
+    console.log(result.text);
+    res.send(JSON.stringify(result.text));
 };
 
 //Find courses
